@@ -95,12 +95,8 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties> 
-<<<<<<< HEAD
+
 </project>
-=======
+
   
 
-</project>
-
-
->>>>>>> 0d5bf48e1c7243978214ede97dc6631ebc7b4cad
