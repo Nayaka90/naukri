@@ -14,12 +14,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class ResumeNaukriApply {
 
 	@Test(dataProvider = "options")
 	public void naukri(String search) throws Throwable {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver=WebDriverManager.chromedriver().create();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.naukri.com/mnjuser/homepage");
 		driver.findElement(By.id("usernameField")).sendKeys("nithishnayaka90@gmail.com");
