@@ -41,7 +41,8 @@ public class ResumeNaukriApply {
 		driver.navigate().back();
 		Thread.sleep(3000);
 		driver.findElement(By.id("qsb-keyskill-sugg")).sendKeys(search);
-		driver.findElement(By.xpath("//button[.='SEARCH']")).click();
+		
+		driver.findElement(By.xpath("//button[text()='SEARCH' and @class='col search l2 btn btn-mid']")).click();
 		WebElement circle = driver.findElement(By.className("cir"));
 		Actions act = new Actions(driver);
 		act.moveToElement(circle).dragAndDropBy(circle, -258, 0).build().perform();
@@ -73,7 +74,7 @@ public class ResumeNaukriApply {
 			}
 
 		}
-
+driver.quit();
 	}
 
 	@DataProvider
